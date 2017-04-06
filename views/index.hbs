@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Store 3 Candy Crush</title>
+    </head>
+    <body>
+        {{#each dates}}
+            <h1>{{this.date}}</h1>
+            {{#each this.[inventory sold]}}
+                {{#if this.quantity}}
+                    <h2>{{@key}}</h2>
+                    <p>${{this.cost}}</p>
+                    <p>{{this.quantity}}</p>
+                {{/if}}
+            {{/each}}
+        {{/each}}
+    </body>
+</html>
